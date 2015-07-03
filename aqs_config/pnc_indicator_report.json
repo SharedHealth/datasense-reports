@@ -1,0 +1,14 @@
+{
+  "query_json_path": "/opt/datasense/lib/dhis_config/aqs_query/pnc_indicator_queries.json",
+  "template_base":"/opt/datasense/lib/dhis_config/",
+  "template_query_map": [
+    {
+      "template_path": "templates/pnc_indicator_template.ftl",
+      "query_list": [
+            "PNC_given_count_within_48_hours",
+            "New_born_care_received"
+      ]
+    }
+  ],
+  "http-post-uri": "http://103.247.238.68:8080/dhis216/api/dataValueSets"
+}
