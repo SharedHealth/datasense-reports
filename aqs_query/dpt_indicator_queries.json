@@ -8,7 +8,7 @@
       },
       {
         "queryName": "number_of_new_borns_of_age_12_to_23_months",
-        "query": "select count(*) as v1 from observation o join encounter e on o.encounter_id = e.encounter_id where o.concept_id =  ':newBornCare:' and ((TIMESTAMPDIFF(MONTH, date(o.datetime), date(':paramStartDate:')) >= 12 and TIMESTAMPDIFF(MONTH, date(o.datetime), date(':paramStartDate:')) <= 23)or (TIMESTAMPDIFF(MONTH, date(o.datetime), date(':paramEndDate:')) >= 12 and TIMESTAMPDIFF(MONTH, date(o.datetime), date(':paramEndDate:')) <= 23))and e.facility_id=':paramFacilityId:';"
+        "query": "select count(*) as v1 from observation o join encounter e on o.encounter_id = e.encounter_id where o.concept_id =  ':newBornCare:' and ((TIMESTAMPDIFF(MONTH, date(o.datetime), date(':paramStartDate:')) >= 12 and TIMESTAMPDIFF(MONTH, date(o.datetime), date(':paramStartDate:')) <= 23) or (TIMESTAMPDIFF(MONTH, date(o.datetime), date(':paramEndDate:')) >= 12 and TIMESTAMPDIFF(MONTH, date(o.datetime), date(':paramEndDate:')) <= 23)) and e.facility_id=':paramFacilityId:';"
       }
     ]
   }
