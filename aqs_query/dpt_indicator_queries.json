@@ -4,7 +4,7 @@
     "queries": [
       {
         "queryName": "Penta_three_given_count_within_12_to_23_months",
-        "query": "select count(*) from medication m join patient p on m.patient_hid = p.patient_hid join encounter e on m.encounter_id = e.encounter_id where m.drug_id=':pentaDrugid:' and ((TIMESTAMPDIFF(MONTH, date(p.dob), date(':paramStartDate:')) >= 12 and TIMESTAMPDIFF(MONTH, date(p.dob), date(':paramStartDate:')) <= 23) or (TIMESTAMPDIFF(MONTH, date(p.dob), date(':paramEndDate:')) >= 12 and TIMESTAMPDIFF(MONTH, date(p.dob), date(':paramEndDate:')) <= 23)) and e.facility_id=':paramFacilityId:';"
+        "query": "select count(*) from medication m join patient p on m.patient_hid = p.patient_hid join encounter e on m.encounter_id = e.encounter_id where m.drug_id=':pentaThreeDrugUuid:' and ((TIMESTAMPDIFF(MONTH, date(p.dob), date(':paramStartDate:')) >= 12 and TIMESTAMPDIFF(MONTH, date(p.dob), date(':paramStartDate:')) <= 23) or (TIMESTAMPDIFF(MONTH, date(p.dob), date(':paramEndDate:')) >= 12 and TIMESTAMPDIFF(MONTH, date(p.dob), date(':paramEndDate:')) <= 23)) and e.facility_id=':paramFacilityId:';"
       },
       {
         "queryName": "number_of_new_borns_of_age_12_to_23_months",
