@@ -1,9 +1,9 @@
 {
-  "query_json_path": "/opt/datasense/lib/dhis_config/aqs_query/pnc_indicator_queries.json",
+  "query_json_path": "/opt/datasense/lib/dhis_config/aqs_query/quarterly_coia_plus_queries.json",
   "template_base":"/opt/datasense/lib/dhis_config/",
   "template_query_map": [
     {
-      "template_path": "templates/pnc_indicator_template.ftl",
+      "template_path": "templates/quarterly_coia_plus_template.ftl",
       "query_list": [
             "PNC_given_count_within_48_hours",
             "New_born_care_received",
