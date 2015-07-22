@@ -4,123 +4,123 @@
     "queries": [
       {
         "queryName": "ip_male_0_to_4",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 0 and 4 and p.gender='M' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 0 and 4 and p.gender='M' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "ip_female_0_to_4",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 0 and 4 and p.gender='F' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 0 and 4 and p.gender='F' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "ip_male_5_to_14",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='M' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='M' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "ip_female_5_to_14",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='F' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='F' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "ip_male_15_to_24",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='M' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='M' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "ip_female_15_to_24",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='F' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='F' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "ip_male_25_to_49",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 25 and 49 and p.gender='M' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 25 and 49 and p.gender='M' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "ip_female_25_to_49",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 25 and 49 and p.gender='F' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 25 and 49 and p.gender='F' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "ip_male_50_above",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='M' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='M' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "ip_female_50_above",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='F' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='F' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "emergency_male_0_to_4",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 0 and 4 and p.gender='M' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 0 and 4 and p.gender='M' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "emergency_female_0_to_4",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 0 and 4 and p.gender='F' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 0 and 4 and p.gender='F' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "emergency_male_5_to_14",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='M' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='M' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "emergency_female_5_to_14",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='F' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='F' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "emergency_male_15_to_24",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='M' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='M' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "emergency_female_15_to_24",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='F' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='F' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "emergency_male_25_to_49",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 25 and 49 and p.gender='M' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 25 and 49 and p.gender='M' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "emergency_female_25_to_49",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 25 and 49 and p.gender='F' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 25 and 49 and p.gender='F' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "emergency_male_50_above",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='M' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='M' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "emergency_female_50_above",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='F' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='F' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "op_male_0_to_4",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 0 and 4 and p.gender='M' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 0 and 4 and p.gender='M' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "op_female_0_to_4",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 0 and 4 and p.gender='F' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 0 and 4 and p.gender='F' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "op_male_5_to_14",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='M' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='M' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "op_female_5_to_14",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='F' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='F' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "op_male_15_to_24",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='M' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='M' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "op_female_15_to_24",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='F' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='F' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "op_male_25_to_49",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 25 and 49 and p.gender='M' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 25 and 49 and p.gender='M' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "op_female_25_to_49",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 25 and 49 and p.gender='F' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 25 and 49 and p.gender='F' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "op_male_50_above",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='M' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='M' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "op_female_50_above",
-        "query": "select count(distinct e.patient_hid) as v1 from encounter e, patient p where facility_id=':paramFacilityId:' and e.patient_hid=p.patient_hid and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='F' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+        "query": "select count(distinct e.patient_hid) as v1 from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='F' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
       },
       {
         "queryName": "death_male_0_to_4",
