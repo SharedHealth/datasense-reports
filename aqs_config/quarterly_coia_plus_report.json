@@ -8,7 +8,8 @@
             "PNC_given_count_within_48_hours",
             "New_born_care_received",
             "Penta_three_given_count_within_12_to_23_months",
-            "number_of_new_borns_of_age_12_to_23_months"
+            "number_of_new_borns_of_age_12_to_23_months",
+            "PNC_given_count_within_48_hours_by_date"
       ]
     }
   ],
