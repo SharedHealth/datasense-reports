@@ -21,13 +21,7 @@
         <#list number_of_new_borns_of_age_12_to_23_months as row>
             {   "dataElement": "Rr5dhnjiWKo", "categoryOptionCombo": "dCWAvZ8hcrs",
                 "value": "${row.v1}"
-            },
-        </#list>
-         <#list PNC_given_count_within_48_hours_by_date as row>
-            {   "dataElement": "vIIFdYmaLk7", "categoryOptionCombo": "dCWAvZ8hcrs",
-                "value": "${row.v1}"
             }
         </#list>
-
   ]
 }
