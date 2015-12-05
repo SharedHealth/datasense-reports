@@ -1,0 +1,52 @@
+{
+    "query_json_path": "/opt/datasense/lib/dhis_config/aqs_query/Daily_OP_ER_IP_D_Query.json",
+    "template_base":"/opt/datasense/lib/dhis_config/",
+    "template_query_map": [
+        {
+            "template_path": "templates/Daily_OP_ER_IP_D_Template.ftl",
+            "query_list": [
+                "Outdoor_Patients_Female_Age_Group_0_4_year",
+                "Outdoor_Patients_Age_Group_15_24_year_Male",
+                "Outdoor_Patients_Age_Group_15_24_year_Female",
+                "Outdoor_Patients_Age_Group_25_49_year_Female",
+                "Outdoor_Patients_Age_Group_25_49_year_Male",
+                "Outdoor_Patients_Age_Group_5_14_year_Female",
+                "Outdoor_Patients_Age_Group_5_14_year_Male",
+                "Outdoor_Patients_Female_Age_Group_50_year",
+                "Outdoor_Patients_Male_Age_Group_0_4_year",
+                "Outdoor_Patients_Male_Age_Group_50_year",
+                "Death_Female_Age_Group_0_4_year",
+                "Death_Age_Group_15_24_year_Male",
+                "Death_Age_Group_15_24_year_Female",
+                "Death_Age_Group_25_49_year_Female",
+                "Death_Age_Group_25_49_year_Male",
+                "Death_Age_Group_5_14_year_Female",
+                "Death_Age_Group_5_14_year_Male",
+                "Death_Female_Age_Group_50_year",
+                "Death_Male_Age_Group_0_4_year",
+                "Death_Male_Age_Group_50_year",
+                "Admission_Patients_Female_Age_Group_0_4_year",
+                "Admission_Patients_Age_Group_25_49_year_Female",
+                "Admission_Patients_Age_Group_25_49_year_Male",
+                "Admission_Patients_Male_Age_Group_5_14_year",
+                "Admission_Patients_Male_Age_Group_0_4_year",
+                "Admission_Patients_Male_Age_Group_50_year",
+                "Admission_Patients_Male_Age_Group_15_24_year",
+                "Admission_Patients_Female_Age_Group_15_24_year",
+                "Admission_Patients_Female_Age_Group_5_14_year",
+                "Admission_Patients_Female_Age_Group_50_year",
+                "Emergency_Patients_Female_Age_Group_0_4_year",
+                "Emergency_Patients_Age_Group_25_49_year_Female",
+                "Emergency_Patients_Age_Group_25_49_year_Male",
+                "Emergency_Patients_Male_Age_Group_5_14_year",
+                "Emergency_Patients_Male_Age_Group_0_4_year",
+                "Emergency_Patients_Male_Age_Group_50_year",
+                "Emergency_Patients_Male_Age_Group_15_24_year",
+                "Emergency_Patients_Female_Age_Group_15_24_year",
+                "Emergency_Patients_Female_Age_Group_5_14_year",
+                "Emergency_Patients_Female_Age_Group_50_year"
+            ]
+        }
+    ],
+    "http-post-uri": "http://dhis2.example.org/api/dataValueSets"
+}
