@@ -160,7 +160,7 @@
                 },
                 {
                     "queryName": "Emergency_Patients_Female_Age_Group_50_year",
-                    "query": "select count(distinct e.patient_hid) as value from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='F' and LOWER(e.visit_type)='outpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+                    "query": "select count(distinct e.patient_hid) as value from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 50 and 200 and p.gender='F' and LOWER(e.visit_type)='emergency' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
                 }
     ]
   }
