@@ -96,7 +96,7 @@
                 },
                 {
                     "queryName": "Admission_Patients_Male_Age_Group_5_14_year",
-                    "query": "select count(distinct e.patient_hid) as value from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 15 and 24 and p.gender='M' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
+                    "query": "select count(distinct e.patient_hid) as value from encounter e join patient p on e.patient_hid = p.patient_hid where facility_id=':paramFacilityId:' and TIMESTAMPDIFF(YEAR, date(p.dob), date(e.encounter_datetime)) between 5 and 14 and p.gender='M' and LOWER(e.visit_type)='inpatient' and DATE_FORMAT(e.encounter_datetime, '%Y-%m-%d')=':paramStartDate:';"
                 },
                 {
                     "queryName": "Admission_Patients_Male_Age_Group_0_4_year",
